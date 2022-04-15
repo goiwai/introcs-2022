@@ -1,0 +1,2 @@
+# introcs-2022
+Course materials for the Introduction to Computer Science, a course of SOKENDAI. The course aims to encourage students to understand the fundamental concept of computer architecture and network communication. Students will also study programming principles through the computational simulation/calculation program required mainly for high-energy/nuclear physics. Two or more lecturers help learners with hands-on lessons throughout the course.
