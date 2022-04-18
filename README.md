@@ -1,2 +1,13 @@
-# introcs-2022
-Course materials for the Introduction to Computer Science, a course of SOKENDAI. The course aims to encourage students to understand the fundamental concept of computer architecture and network communication. Students will also study programming principles through the computational simulation/calculation program required mainly for high-energy/nuclear physics. Two or more lecturers help learners with hands-on lessons throughout the course.
+# Introduction to Computational Science 2022
+
+- Proposed schedule for regular classes
+  - Date: Every Tuesday, 13:00~16:00
+    - 3 hours class x6-7 (two months intense course)
+  - Place: Meeting room #2, South building, Computing Research Centre
+  - Beginning date and Ending date: TBA
+    - The course will begin by the beginning of June in the latest case
+    - The course will end by the end of July in the latest case
+    - Announce comes at least two weeks earlier than the beginning date
+- Course materials
+  - Slide: <https://wiki.kek.jp/display/~iwai/Introduction+to+Computational+Science+2022>
+  - Code: <https://github.com/goiwai/introcs-2022>
