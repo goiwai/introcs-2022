@@ -1,4 +1,4 @@
-# Usage: bsub -cwd %J/%I -J 'B5[1-10]' -o std.out -e std.err /bin/bash $PWD/B5-array.sh
+# Usage: bsub -cwd %J/%I -J 'B5[1-10]' -o std.out -e std.err /bin/bash $PWD/B5-array-job.sh
 geant4_version=10.7.1
 gcc_version=830
 
