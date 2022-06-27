@@ -2,11 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.60])
-AC_INIT(
-  [zlib-read-write],
-  [1.2.3],
-  [go.iwai@kek.jp]
-)
+AC_INIT([zlib-read-write],[1.2.3],[go.iwai@kek.jp])
 AM_INIT_AUTOMAKE([foreign])
 AC_CONFIG_SRCDIR([zlib-read.cxx])
 AC_CONFIG_SRCDIR([zlib-write.cxx])
