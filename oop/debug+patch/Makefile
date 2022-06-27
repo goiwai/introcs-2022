@@ -1,5 +1,3 @@
-# CXX = clang++
-# CXXFLAGS := -Wall -ansi -pedantic -O2 とほぼ同義だが
 # CXXFLAGS := $(CXXFLAGS) -march=pentium
 # enables self-referencing like above:
 CXXFLAGS = -Wall -pedantic -O2
