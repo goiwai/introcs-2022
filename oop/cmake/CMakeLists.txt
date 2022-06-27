@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.12)
 project(zlib-read-write
   VERSION 1.2.3
   LANGUAGES CXX

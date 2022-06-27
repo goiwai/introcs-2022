@@ -9,7 +9,7 @@ CMakeLists.txt  zlib-read.cpp  zlib-write.cpp
 % cd build
 
 # target: the directory where CMakeLists.txt is
-% cmake ..
+% cmake3 ..
 -- The CXX compiler...
 ...snip
 -- Build files have been written to:...
