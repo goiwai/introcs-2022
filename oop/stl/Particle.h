@@ -6,10 +6,12 @@
 
 class Particle {
   public:
-    // constructor/copy constructor/destructor
+    // constructors
     Particle();
     Particle(const std::string &name, double mass, const ThreeVector &pos = ThreeVector(), const ThreeVector &mom = ThreeVector());
-    Particle(const Particle& p);
+    // copy constructor
+    Particle(const Particle &p);
+    // destructor
     ~Particle();
 
   public:
