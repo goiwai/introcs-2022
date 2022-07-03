@@ -16,35 +16,35 @@
 
 class File {
   public:
-    // constructor/copy constructor/destructor
-    // フラグ 内容
-    // eofbit ファイルの終端に達した
-    // failbit 内部動作が原因で入力操作が失敗した← open/close に失敗すると立つ
-    //  バッファを使い切らずに読み終わっても立つ
-    // badbit ストリームバッファの入出力操作が失敗した
-    // goodbit エラーなし（値としてはゼロ）
-    // std::ios::fail() と等価 std::ios::failbit | std::ios::badbit
-    // std::ios::bad() と等価 std::ios::badbit
+    // constructor
     File(std::ios::iostate ifs_except = std::ios::failbit | std::ios::badbit, std::ios::iostate ofs_except = std::ios::failbit | std::ios::badbit);
+    // iostate values:
+    //   eofbit: End-of-File reached on input operation
+    //   failbit: Logical error on i/o operation,
+    //     e.g.:
+    //       when open/close filed,
+    //       when finishing the read operation without using the full size of the read buffer
+    //   badbit: Read/writing error on i/o operation
+    //   goodbit: No errors (zero value iostate)
+    //   std::ios::fail() is equivalent to (std::ios::failbit | std::ios::badbit)
+    //   std::ios::bad() is equivalent to (std::ios::badbit)
+
+    // destructor
     ~File();
+
   public:
-    // void Copy(const std::string &ifile, const std::string &ofile)
-    // throw (std::ios::failure) {
-    // 動的例外仕様はC++11で非推奨この書き方はC++17では削除
-    // C++11で導入されたnoexcept例外仕様を使用したコード。
-    // noexceptおよびnoexcept(true)は、「この関数からは例外を送出しない」という宣言。
-    // noexcept(false)およびnoexceptを付けないことは「この関数からは例外を送出する可能性がある」という宣言。
-    // void f() noexcept;
-    // void f() noexcept(true);
-    // void f() noexcept(false);
-    // void f();
-    // void Copy(const std::string &ifile,
-    //           const std::string &ofile) noexcept(false);
-    // void Copy(const std::string &ifile, const std::string &ofile) throw(std::ios::failure);
 #if CXXSTD >= 17
     void Copy(const std::string &ifile, const std::string &ofile) noexcept(false);
+    // Potential exceptions since C++11
+    //   noexcept; or noexcept(true);
+    //     declares to not throw any exceptions.
+    //   noexcept(false); or without noexcept
+    //     declares the function may throw exceptions.
 #else
     void Copy(const std::string &ifile, const std::string &ofile) throw(std::ios::failure);
+    // Dynamic exception specification
+    //   deprecated in C++11
+    //   removed in C++17
 #endif
 
   private:
