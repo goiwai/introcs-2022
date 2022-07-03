@@ -14,12 +14,14 @@
 
 class ThreeVector {
   public:
-    // constructor/copy constructor/destructor
+    // constructors
     ThreeVector();
     ThreeVector(double x);
     ThreeVector(double x, double y);
     ThreeVector(double x, double y, double z);
+    // copy constructor
     ThreeVector(const ThreeVector &v);
+    // destructor
     ~ThreeVector();
 
   public:
