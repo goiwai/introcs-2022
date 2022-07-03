@@ -1,9 +1,12 @@
-// std::coutを使うために必要
+// include for std::cout
 #include <iostream>
+// determines various properties of the various variable types.
+// limits the values of various variable types like char, int and long.
 #include <limits.h>
 
-// 「longは４バイトだ」という決めつけはしないこと
-// sizeof 演算子でとってくる習慣をつけましょう
+// Do not assume long type has four bytes length
+// it depends on the CPU architecture where the program runs
+// To get the true size of types: use sizeof operator
 int main() {
   std::cout << "sizeof(int*)=" << sizeof(int*) << " bytes=" << sizeof(int *) * CHAR_BIT << " bits" << std::endl;
 

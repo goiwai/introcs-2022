@@ -1,12 +1,14 @@
-// std::coutを使うために必要
+// include for std::cout
 #include <iostream>
 
-// 各変数型の最大値と最小値が定義されています
+// determines various properties of the various variable types.
+// limits the values of various variable types like char, int and long.
 #include <limits.h>
+// contains a set of various platform-dependent constants related to floating point values.
 #include <float.h>
 
 int main() {
-  // limits.h より
+  // Determined in limits.h
   std::cout << "(signed) int: " << INT_MIN << "~" << INT_MAX << std::endl;
   std::cout << "unsigned int: " << 0 << "~" << UINT_MAX << std::endl;
   std::cout << "(signed) short: " << SHRT_MIN << "~" << SHRT_MAX << std::endl;
@@ -14,12 +16,12 @@ int main() {
   std::cout << "(signed) long: " << LONG_MIN << "~" << LONG_MAX << std::endl;
   std::cout << "unsigned long: " << 0 << "~" << ULONG_MAX << std::endl;
 
-  // float.h より
+  // Determined in float.h
   std::cout << "float: " << FLT_MIN << "~" << FLT_MAX << std::endl;
   std::cout << "double: " << DBL_MIN << "~" << DBL_MAX << std::endl;
   std::cout << "long double: " << LDBL_MIN << "~" << LDBL_MAX << std::endl;
 
-  // limits.h より
+  // Determined in limits.h
   std::cout << "(signed) char: " << CHAR_MIN << "~" << CHAR_MAX << std::endl;
   std::cout << "unsigned char: " << 0 << "~" << UCHAR_MAX << std::endl;
 
