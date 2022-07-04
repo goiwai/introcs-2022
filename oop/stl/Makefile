@@ -3,6 +3,13 @@
 CXXFLAGS = -fPIC -Wall -pedantic -O2 
 # CPPFLAGS += -DDEBUG
 
+ifeq ($(CXX), g++)
+  CXXVERSION = $(shell g++ --version | grep '^g++' | awk '{print $$3}' | sed 's/\.//g')
+  ifeq ($(shell test $(CXXVERSION) -lt 800; echo $$?), 0)
+    $(warning Version 8 or later of GCC is required to build some C++17-enabled programs. Since CentOS7 build-in GCC is version 4.8, we need to have extra work for installing the C++17 supported compiler. To use the prebuilt version of GCC, run like `module load gcc/830` before `make`.)
+  endif
+endif
+
 .PHONY: all clean
 
 all: calc-tmpl-main.exe \
