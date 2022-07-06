@@ -3,9 +3,9 @@
 
 // determines various properties of the various variable types.
 // limits the values of various variable types like char, int and long.
-#include <limits.h>
+#include <climits>
 // contains a set of various platform-dependent constants related to floating point values.
-#include <float.h>
+#include <cfloat>
 
 int main() {
   // Determined in limits.h
