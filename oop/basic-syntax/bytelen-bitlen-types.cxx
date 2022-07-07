@@ -3,6 +3,7 @@
 // determines various properties of the various variable types.
 // limits the values of various variable types like char, int and long.
 #include <climits>
+// #include <limits.h>  // C standard library
 
 // Do not assume long type has four bytes length
 // it depends on the CPU architecture where the program runs
