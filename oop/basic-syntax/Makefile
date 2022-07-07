@@ -5,7 +5,10 @@ CXXFLAGS = -std=c++11 -fPIC -Wall -pedantic -O2
 
 .PHONY: all clean
 
-all: bytelen-bitlen-types.exe max-min-types.exe enum-typedef.exe errno.exe
+all: bytelen-bitlen-types.exe \
+	max-min-types.exe max-min-types-C++.exe \
+	enum-typedef.exe \
+	errno.exe
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c -o $@ $<
@@ -16,6 +19,7 @@ all: bytelen-bitlen-types.exe max-min-types.exe enum-typedef.exe errno.exe
 bytelen-bitlen-types.o: bytelen-bitlen-types.cxx
 enum-typedef.o: enum-typedef.cxx
 max-min-types.o: max-min-types.cxx
+max-min-types-C++.o: max-min-types-C++.cxx
 errno.o: errno.cxx
 
 %.exe:
@@ -24,6 +28,7 @@ errno.o: errno.cxx
 bytelen-bitlen-types.exe: bytelen-bitlen-types.o
 enum-typedef.exe: enum-typedef.o
 max-min-types.exe: max-min-types.o
+max-min-types-C++.exe: max-min-types-C++.o
 errno.exe: errno.o
 
 clean:
