@@ -11,7 +11,7 @@
 // #include <float.h>   // C Standard Library
 
 int main() {
-  // Determined in limits.h
+  // Determined in <climits>
   std::cout << "(signed) int: " << INT_MIN << "~" << INT_MAX << std::endl;
   std::cout << "unsigned int: " << 0 << "~" << UINT_MAX << std::endl;
   std::cout << "(signed) short: " << SHRT_MIN << "~" << SHRT_MAX << std::endl;
@@ -19,12 +19,12 @@ int main() {
   std::cout << "(signed) long: " << LONG_MIN << "~" << LONG_MAX << std::endl;
   std::cout << "unsigned long: " << 0 << "~" << ULONG_MAX << std::endl;
 
-  // Determined in float.h
+  // Determined in <cfloat>
   std::cout << "float: " << FLT_MIN << "~" << FLT_MAX << std::endl;
   std::cout << "double: " << DBL_MIN << "~" << DBL_MAX << std::endl;
   std::cout << "long double: " << LDBL_MIN << "~" << LDBL_MAX << std::endl;
 
-  // Determined in limits.h
+  // Determined in <climits>
   std::cout << "(signed) char: " << CHAR_MIN << "~" << CHAR_MAX << std::endl;
   std::cout << "unsigned char: " << 0 << "~" << UCHAR_MAX << std::endl;
 
