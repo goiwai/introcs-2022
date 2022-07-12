@@ -39,9 +39,9 @@ class ThreeVector {
     double X() const;
     double Y() const;
     double Z() const;
-    void SetX(double x);
-    void SetY(double y);
-    void SetZ(double z);
+    void X(double x);
+    void Y(double y);
+    void Z(double z);
 
     // dot product
     double Dot(const ThreeVector &v) const;
@@ -73,17 +73,17 @@ inline double ThreeVector::Z() const {
   return z_;
 }
 
-inline void ThreeVector::SetX(double x) {
+inline void ThreeVector::X(double x) {
   x_ = x;
   return;
 }
 
-inline void ThreeVector::SetY(double y) {
+inline void ThreeVector::Y(double y) {
   y_ = y;
   return;
 }
 
-inline void ThreeVector::SetZ(double z) {
+inline void ThreeVector::Z(double z) {
   z_ = z;
   return;
 }
