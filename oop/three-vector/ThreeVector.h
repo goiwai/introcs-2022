@@ -36,6 +36,13 @@ class ThreeVector {
 
   public:
     // set/get methods and utilities
+    double GetX() const;
+    double GetY() const;
+    double GetZ() const;
+    void SetX(double x);
+    void SetY(double y);
+    void SetZ(double z);
+    // set/get method aliases in C++98 fashion
     double X() const;
     double Y() const;
     double Z() const;
@@ -61,30 +68,57 @@ class ThreeVector {
     double z_;
 };
 
-inline double ThreeVector::X() const {
+inline double ThreeVector::GetX() const {
   return x_;
 }
 
-inline double ThreeVector::Y() const {
+inline double ThreeVector::GetY() const {
   return y_;
 }
 
-inline double ThreeVector::Z() const {
+inline double ThreeVector::GetZ() const {
   return z_;
 }
 
-inline void ThreeVector::X(double x) {
+inline void ThreeVector::SetX(double x) {
   x_ = x;
   return;
 }
 
-inline void ThreeVector::Y(double y) {
+inline void ThreeVector::SetY(double y) {
   y_ = y;
   return;
 }
 
-inline void ThreeVector::Z(double z) {
+inline void ThreeVector::SetZ(double z) {
   z_ = z;
+  return;
+}
+
+inline double ThreeVector::X() const {
+  return GetX();
+}
+
+inline double ThreeVector::Y() const {
+  return GetY();
+}
+
+inline double ThreeVector::Z() const {
+  return GetZ();
+}
+
+inline void ThreeVector::X(double x) {
+  SetX(x);
+  return;
+}
+
+inline void ThreeVector::Y(double y) {
+  SetY(y);
+  return;
+}
+
+inline void ThreeVector::Z(double z) {
+  SetZ(z);
   return;
 }
 
