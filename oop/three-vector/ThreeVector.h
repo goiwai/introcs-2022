@@ -43,12 +43,27 @@ class ThreeVector {
     void SetY(double y);
     void SetZ(double z);
     // set/get method aliases in C++98 fashion
-    double X() const;
-    double Y() const;
-    double Z() const;
-    void X(double x);
-    void Y(double y);
-    void Z(double z);
+    double X() const {
+      return GetX();
+    }
+    double Y() const {
+      return GetY();
+    }
+    double Z() const {
+      return GetZ();
+    }
+    void X(double x) {
+      SetX(x);
+      return;
+    }
+    void Y(double y) {
+      SetY(y);
+      return;
+    }
+    void Z(double z) {
+      SetZ(z);
+      return;
+    }
 
     // dot product
     double Dot(const ThreeVector &v) const;
@@ -92,33 +107,6 @@ inline void ThreeVector::SetY(double y) {
 
 inline void ThreeVector::SetZ(double z) {
   z_ = z;
-  return;
-}
-
-inline double ThreeVector::X() const {
-  return GetX();
-}
-
-inline double ThreeVector::Y() const {
-  return GetY();
-}
-
-inline double ThreeVector::Z() const {
-  return GetZ();
-}
-
-inline void ThreeVector::X(double x) {
-  SetX(x);
-  return;
-}
-
-inline void ThreeVector::Y(double y) {
-  SetY(y);
-  return;
-}
-
-inline void ThreeVector::Z(double z) {
-  SetZ(z);
   return;
 }
 
