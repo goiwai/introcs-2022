@@ -3,13 +3,14 @@
 
 #include <iostream>
 
-#ifndef DEBUG
-#define MYDEBUG
+#ifdef DEBUG
+#define MYDEBUG                                           \
+  std::cerr << __PRETTY_FUNCTION__                        \
+            << " [" << __FILE__ << ":" << __LINE__ << "]" \
+            << " (Built at " << __TIME__                  \
+            << " on " << __DATE__ << ")" << std::endl;
 #else
-#define MYDEBUG \
-  std::cerr << __DATE__ << " " << __TIME__ << " " \
-            << __PRETTY_FUNCTION__  \
-            << " <" << __FILE__ << ":" << __LINE__ << ">" << std::endl;
+#define MYDEBUG
 #endif
 
 class ThreeVector {
@@ -131,5 +132,4 @@ inline ThreeVector operator*(double val, const ThreeVector &v) {
   MYDEBUG;
   return ThreeVector(v.x_ * val, v.y_ * val, v.z_ * val);
 }
-
 #endif // THREEVECTOR_H_
