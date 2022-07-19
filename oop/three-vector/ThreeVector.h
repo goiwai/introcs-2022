@@ -3,13 +3,14 @@
 
 #include <iostream>
 
-#ifndef DEBUG
-#define MYDEBUG
+#ifdef DEBUG
+#define MYDEBUG                                           \
+  std::cerr << __PRETTY_FUNCTION__                        \
+            << " [" << __FILE__ << ":" << __LINE__ << "]" \
+            << " (Built at " << __TIME__                  \
+            << " on " << __DATE__ << ")" << std::endl;
 #else
-#define MYDEBUG \
-  std::cerr << __DATE__ << " " << __TIME__ << " " \
-            << __PRETTY_FUNCTION__  \
-            << " <" << __FILE__ << ":" << __LINE__ << ">" << std::endl;
+#define MYDEBUG
 #endif
 
 class ThreeVector {
@@ -36,12 +37,34 @@ class ThreeVector {
 
   public:
     // set/get methods and utilities
-    double X() const;
-    double Y() const;
-    double Z() const;
+    double GetX() const;
+    double GetY() const;
+    double GetZ() const;
     void SetX(double x);
     void SetY(double y);
     void SetZ(double z);
+    // set/get method aliases in C++98 fashion
+    double X() const {
+      return GetX();
+    }
+    double Y() const {
+      return GetY();
+    }
+    double Z() const {
+      return GetZ();
+    }
+    void X(double x) {
+      SetX(x);
+      return;
+    }
+    void Y(double y) {
+      SetY(y);
+      return;
+    }
+    void Z(double z) {
+      SetZ(z);
+      return;
+    }
 
     // dot product
     double Dot(const ThreeVector &v) const;
@@ -61,15 +84,15 @@ class ThreeVector {
     double z_;
 };
 
-inline double ThreeVector::X() const {
+inline double ThreeVector::GetX() const {
   return x_;
 }
 
-inline double ThreeVector::Y() const {
+inline double ThreeVector::GetY() const {
   return y_;
 }
 
-inline double ThreeVector::Z() const {
+inline double ThreeVector::GetZ() const {
   return z_;
 }
 
@@ -109,5 +132,4 @@ inline ThreeVector operator*(double val, const ThreeVector &v) {
   MYDEBUG;
   return ThreeVector(v.x_ * val, v.y_ * val, v.z_ * val);
 }
-
 #endif // THREEVECTOR_H_
