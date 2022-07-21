@@ -7,17 +7,10 @@
 class Tiger : public Animal {
   public:
     // constructor/copy constructor/destructor
-    Tiger();
+    Tiger(const std::string& species = "Tiger", food_t favorite_food = meat);
     ~Tiger();
-
   public:
-    inline void Eat(food_t food) const {
-      if (favorite_food_ == food) {
-        std::cout << species_ << " ate " << food << ". Looks happy." << std::endl;
-      } else {
-        std::cout << species_ << " didn't eat " << food << ". Looks unhappy." << std::endl;
-      }
-    }
+    void Eat(food_t food) const;
 };
 
 #endif // TIGER_H_
