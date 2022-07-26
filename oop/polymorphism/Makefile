@@ -10,7 +10,7 @@ all: main.exe
 %.o: %.cxx
 	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c -o $@ $<
 
-main.o: main.cxx
+main.o: main.cxx Zoo.h Animal.h Donkey.h Giraffe.h Tiger.h
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c -o $@ $<

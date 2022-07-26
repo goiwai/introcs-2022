@@ -17,21 +17,25 @@ class Particle {
   public:
     // assignment/comparison operators
     const Particle& operator=(const Particle& p);
-    bool operator==(const Particle& p) const;
-    bool operator!=(const Particle& p) const;
+    bool operator==(const Particle& p) const {
+      return (name_ == p.name_);
+    }
+    bool operator!=(const Particle& p) const {
+      return (name_ != p.name_);
+    }
 
   public:
     // set/get methods and utilities
-    inline const std::string& GetName() const {
+    const std::string& GetName() const {
       return name_;
     }
-    inline double GetMass() const {
+    double GetMass() const {
       return mass_;
     }
-    inline const ThreeVector& GetPosition() const {
+    const ThreeVector& GetPosition() const {
       return position_;
     }
-    inline const ThreeVector& GetMomentum() const {
+    const ThreeVector& GetMomentum() const {
       return momentum_;
     }
 

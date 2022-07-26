@@ -7,17 +7,10 @@
 class Giraffe : public Animal {
   public:
     // constructor/copy constructor/destructor
-    Giraffe();
+    Giraffe(const std::string& species = "Giraffe", food_t favorite_food = leaf);
     ~Giraffe();
-
   public:
-    inline void Eat(food_t food) const {
-      if (favorite_food_ == food) {
-        std::cout << species_ << " ate " << food << ". Looks happy." << std::endl;
-      } else {
-        std::cout << species_ << " didn't eat " << food << ". Looks unhappy." << std::endl;
-      }
-    }
+    void Eat(food_t food) const;
 };
 
 #endif // GIRAFFE_H_
