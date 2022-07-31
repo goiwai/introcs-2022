@@ -27,7 +27,7 @@ Also, the report may contain a special effort for something worthwhile. **Earn +
 
 ## Submission Procedure
 
-Once you are ready to submit the report to be reviewed, create a Pull Request (PR), the due is: **Wednesday, August 31st, 2022, End of Day, Anywhere on Earth (AoE)**.
+Once you are ready to submit the report to be reviewed, create a Pull Request (PR), the due is: **Friday, August 26th, 2022, End of Day, Anywhere on Earth (AoE)**.
 
 The source of PR is the specific branch named in the student ID, e.g., 20211234. The destination branch must be the same name as the source branch.
 
