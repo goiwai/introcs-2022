@@ -9,6 +9,7 @@ To use the prebuilt version of GCC, run like `module load gcc/830` before `make`
 # creates:
 #   calc-tmpl-main.exe
 #   particle-table.exe
+#   smart-pointer-example.exe
 #   dict-particle-mass-c++98.exe
 #   dict-particle-mass-c++11.exe
 #   dict-particle-mass-c++17.exe
