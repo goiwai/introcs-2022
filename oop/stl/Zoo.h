@@ -8,7 +8,10 @@
 #include "Animal.h"
 
 class Animal;
-typedef std::vector<std::unique_ptr<Animal>> CageList;
+
+// typedef std::unique_ptr<Animal> Cage;
+typedef std::shared_ptr<Animal> Cage;
+typedef std::vector<Cage> CageList;
 
 class Zoo {
   public:
@@ -20,6 +23,12 @@ class Zoo {
     // set/get methods and utilities
     void MoveIn(Animal* animal);
     void Feed(food_t food, int id = -1);
+    const CageList& GetCageList() const {
+      return cage_list_;
+    }
+    const Cage& GetCage(int index) const {
+      return cage_list_[index];
+    }
 
   private:
     // data members

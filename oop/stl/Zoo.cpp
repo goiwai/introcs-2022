@@ -21,7 +21,7 @@ Zoo::~Zoo() {
 
 void Zoo::MoveIn(Animal* animal) {
   MYDEBUG;
-  cage_list_.push_back(std::unique_ptr<Animal>(animal));
+  cage_list_.push_back(Cage(animal));
   // if (number_of_animals_ >= number_of_cages_) {
   //   number_of_cages_ *= 2;
   //   Animal** expanded = new Animal*[number_of_cages_];
