@@ -17,7 +17,7 @@ All the materials must be stored under the directory [`report`](../report/). **G
 
 ## Report
 
-The report must be written in English with 11 points or larger fonts, up to four pages of A4 paper. Any file format is acceptable but **+1 is granted** if the report is created in LaTeX.
+The report must be written in English with 11 points or larger fonts, for two pages or more of A4 paper. Any file format is acceptable but **+1 is granted** if the report is created in LaTeX.
 
 The report should describe how/what you have achieved in the assignment above.
 
@@ -34,4 +34,4 @@ The source of PR is the specific branch named in the student ID, e.g., 20211234.
 ## Evaluation Policy
 
 1. No PR before due, no grade.
-2. Course grade will be granted either one of A if the report took +3 or more extra points. +2, +1, goes B, C respectively, and 0 for D.
+2. The course grade will be granted either one of A, B, C, or D. If the report takes +3 or more extra points, the qualified grade A, and +2, +1, and 0 go B, C, and D, respectively.
